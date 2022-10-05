@@ -1,0 +1,16 @@
+create database API_CONTACTO_PRUEBA_TECNINA_REACT_FRONT
+
+USE API_CONTACTO_PRUEBA_TECNINA_REACT_FRONT
+
+create table Contacto
+(
+	idContacto int primary key identity (1,1),
+	nombre varchar(50),
+	correo varchar(50),
+	telefono varchar(50)
+)
+
+insert into Contacto (nombre, correo, telefono) values ('Jose', 'Jose@gmail', '8093581482');
+insert into Contacto (nombre, correo, telefono) values ('Marcos', 'Marcosjoelsorianoguerrero@gmail', '8495785315');
+
+select * from Contacto
