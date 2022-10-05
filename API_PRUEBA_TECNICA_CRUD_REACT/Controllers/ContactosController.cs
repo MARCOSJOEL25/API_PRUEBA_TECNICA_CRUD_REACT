@@ -32,7 +32,7 @@ namespace API_PRUEBA_TECNICA_CRUD_REACT.Controllers
 
         [HttpPost]
         [Route("SaveData")]
-        public async Task<IActionResult> Save([FromBody] Contacto contacto)
+        public async Task<IActionResult> SaveData([FromBody] Contacto contacto)
         {
             await _context.Contactos.AddAsync(contacto);
             await _context.SaveChangesAsync();
@@ -51,8 +51,8 @@ namespace API_PRUEBA_TECNICA_CRUD_REACT.Controllers
         }
 
         [HttpDelete]
-        [Route("Delete")]
-        public async Task<IActionResult> Delete([FromBody] int id)
+        [Route("Delete/{id:int}")]
+        public async Task<IActionResult> Delete(int id)
         {
             Contacto contactoDelete = _context.Contactos.Find(id);
 
